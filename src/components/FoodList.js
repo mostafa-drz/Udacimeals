@@ -13,7 +13,7 @@ class FoodList extends Component{
         return(
           <ul className='food-list'>
             {
-                food.map((item) => (
+                this.props.food.map((item) => (
                     <li onClick={() => this.props.onSelect(item)} key={item.label}>
                         <h3>{trim(item.label)}</h3>
                         <img src={item.image} alt={item.label}/>
@@ -26,3 +26,5 @@ class FoodList extends Component{
         )
     }
 }
+
+export default FoodList
